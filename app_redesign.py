@@ -14,7 +14,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 # ==========================================
 
 st.set_page_config(
-    page_title="RecoLearn",
+    page_title="NexaStudy",
     page_icon="📚",
     layout="wide"
 )
@@ -93,7 +93,7 @@ df, tfidf_matrix, vectorizer = load_project_data()
 # ==========================================
 
 def get_connection():
-    return sqlite3.connect("recolearn.db")
+    return sqlite3.connect("NexaStudy.db")
 
 def setup_database():
     conn = get_connection()
@@ -301,7 +301,7 @@ if "username" not in st.session_state:
 
 if not st.session_state.username:
 
-    st.markdown("<h1 style='text-align:center;color:#211B43;'>📚 RecoLearn</h1>",
+    st.markdown("<h1 style='text-align:center;color:#211B43;'>📚 NexaStudy</h1>",
                 unsafe_allow_html=True)
 
     st.markdown(
@@ -313,7 +313,7 @@ if not st.session_state.username:
     left, center, right = st.columns([1, 1.3, 1])
 
     with center:
-        st.subheader("Welcome to RecoLearn")
+        st.subheader("Welcome to NexaStudy")
         st.write("Enter a username to access your learning space.")
 
         with st.form("login_form"):
@@ -342,7 +342,7 @@ if not st.session_state.username:
 # ==========================================
 
 with st.sidebar:
-    st.markdown("# 📚 RecoLearn")
+    st.markdown("# 📚 NexaStudy")
     st.caption("Discover More. Learn Better.")
 
     st.divider()
@@ -375,7 +375,7 @@ with st.sidebar:
 if page == "Home":
 
     st.markdown(
-        "<div class='main-title'>Welcome to RecoLearn 👋</div>",
+        "<div class='main-title'>Welcome to NexaStudy 👋</div>",
         unsafe_allow_html=True
     )
 
@@ -645,13 +645,13 @@ if page == "Feedback":
 if page == "About Project":
 
     st.markdown(
-        "<div class='main-title'>About RecoLearn</div>",
+        "<div class='main-title'>About NexaStudy</div>",
         unsafe_allow_html=True
     )
 
     st.write(
         """
-        RecoLearn is an intelligent study resource
+        NexaStudy is an intelligent study resource
         recommendation system designed to help learners
         discover relevant educational materials while
         reducing repetitive recommendations.
@@ -683,7 +683,7 @@ if page == "About Project":
 st.divider()
 
 st.caption(
-    "RecoLearn | Intelligent Study Resource Recommendation System"
+    "NexaStudy | Intelligent Study Resource Recommendation System"
 )
 
 st.caption(
