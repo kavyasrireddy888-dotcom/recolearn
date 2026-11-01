@@ -28,6 +28,21 @@ st.markdown("""
 .stApp {
     background-color: #F7F5FC;
 }
+/* FIX MAIN PAGE TEXT VISIBILITY */
+.stApp [data-testid="stMain"] {
+    color: #211B43 !important;
+}
+
+.stApp [data-testid="stMain"] label,
+.stApp [data-testid="stMain"] p,
+.stApp [data-testid="stMain"] h1,
+.stApp [data-testid="stMain"] h2,
+.stApp [data-testid="stMain"] h3,
+.stApp [data-testid="stMain"] h4,
+.stApp [data-testid="stMain"] [data-testid="stMarkdownContainer"],
+.stApp [data-testid="stMain"] [data-testid="stCaptionContainer"] {
+    color: #211B43 !important;
+}
 [data-testid="stSidebar"] {
     background-color: #17152F;
 }
